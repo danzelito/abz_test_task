@@ -63,7 +63,7 @@ const userRegister = (req, res, next) => {
       errorsArray.push({msg: "File size should not be more than 5MB", param: "photo"})
     }
   }
-  if (errorsArray && errorsArray.length > 0 || !validationErrors.isEmpty()) {
+  if (errorsArray || errorsArray.length > 0 || !validationErrors.isEmpty()) {
     return res.status(422).json({
       success: false,
       message: "Validation failed",
