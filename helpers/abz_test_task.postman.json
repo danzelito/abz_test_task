@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "193bae5a-8b55-4784-a8e1-8f4e04d3b2e9",
+		"name": "abz_test_task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userRegistration",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiUHVibGljIFVzZXIiLCJkYXRhIjoiVG9rZW4gRm9yIFJlZ2lzdHJhdGlvbiIsImlhdCI6MTY1NzIyNDI2MSwiZXhwIjoxNjU3MjI2NjYxfQ.UezoRbsexDRPq6dSLNyyNyfPUutRIHJ4krTqC_ay0LI",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Denis",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "danzhokhov3@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "phone",
+							"value": "+380979128974",
+							"type": "default"
+						},
+						{
+							"key": "position_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/F:/DSC_0228.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPositions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/positions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"positions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiUHVibGljIFVzZXIiLCJkYXRhIjoiVG9rZW4gRm9yIFJlZ2lzdHJhdGlvbiIsImlhdCI6MTY1NzMwNDk4MSwiZXhwIjoxNjU3MzA3MzgxfQ.h9fywQJabib3s3zpbW3iBK9xr_LxNkEXEVZH6eKQEq8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/users/62c86dbd90b1b0a05d07b6c0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"62c86dbd90b1b0a05d07b6c0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiUHVibGljIFVzZXIiLCJkYXRhIjoiVG9rZW4gRm9yIFJlZ2lzdHJhdGlvbiIsImlhdCI6MTY1NzM1MTcxNSwiZXhwIjoxNjU3MzU1MzE1fQ.D8w1BCgmTBGduLzgCxotcIjNYfuLl80Ha-21ffSjWNM",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/users/all-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"all-users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
